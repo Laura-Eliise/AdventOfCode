@@ -6,7 +6,6 @@ fn main() {
 }
 
 fn read_file(path: &str) -> String {
-    // Reading the file.
     let file = read_to_string(path);
     return match file {
         Ok(t) => t,
