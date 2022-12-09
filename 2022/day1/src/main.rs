@@ -20,16 +20,19 @@ fn part1(path: &str) -> u32 {
     // Finding the highest calorie backpack.
     for ration in data.split("\n\n") {
         let mut backpack: u32 = 0;
+
         for calories in ration.split("\n") {
             backpack += match calories.trim().parse::<u32>() {
                 Ok(num) => num,
                 Err(error) => panic!("Parse error: {}", error)
             };
         };
+
         if backpack > ans {
             ans = backpack;
         };
     };
+
     return ans
 }
 
@@ -40,6 +43,7 @@ fn part2(path: &str) -> u32 {
     // Finding the top 3 highest calorie backpack.
     for ration in data.split("\n\n") {
         let mut backpack: u32 = 0;
+        
         for calories in ration.split("\n") {
             backpack += match calories.trim().parse::<u32>() {
                 Ok(num) => num,
