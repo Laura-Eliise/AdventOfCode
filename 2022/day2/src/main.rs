@@ -3,7 +3,8 @@ use std::fs::read_to_string;
 fn main() {
     let data = read_file("./src/info.txt");
 
-    println!("Answer is {}", part2(data))
+    println!("Part 1 answer is {}.", part1(data.clone()));
+    println!("Part 2 answer is {}.", part2(data.clone()));
 }
 
 fn read_file(path: &str) -> String {
