@@ -56,7 +56,7 @@ fn part1(data: String) -> u64 {
     let mut ans: u64 = 0;
     let dir_size = find_dir_sizes(data);    
 
-    for (key, value) in dir_size.iter() {
+    for (_, value) in dir_size.iter() {
         if value < &100000 {
             ans += value;
         }
