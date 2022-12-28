@@ -1,4 +1,4 @@
-use std::{fs::read_to_string, cmp::max};
+use std::fs::read_to_string;
 
 fn main() {
     let data = read_file("./src/info.txt");
